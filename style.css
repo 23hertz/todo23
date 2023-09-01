@@ -46,3 +46,32 @@ form button:hover
     background: #d77881;
     color: #fff;
 }
+
+.todo-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list
+{
+    min-height: 30%;
+    list-style: none;
+}
+
+.todo
+{
+    margin: 0.5rem;
+    background: #fff;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo li
+{
+    flex: 1;
+}
