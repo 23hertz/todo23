@@ -4,29 +4,29 @@ const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 
 // event Listeners
-todoButton.addEventListener('click',addTodo)
+todoButton.addEventListener("click", addTodo);
 
 //functions
-function addTodo(event)
-{
-    event.preventDefault()
-    const todoDiv = document.createElement("div");
-    todoDiv.classList.add("todo")
+function addTodo(event) {
+  event.preventDefault();
 
-    const newTodo =document.createElement('li');
-    newTodo.innerText = 'hello'
-    newTodo.classList.add('todoItem');
-    todoDiv.appendChild(newTodo)
+  const todoDiv = document.createElement("div");
+  todoDiv.classList.add("todo");
 
-    const completedButton =  document.createElement("button");
-    completedButton.innerHTML = '<i class="fas fa-check"></i>'
-    completedButton.classList.add("completed-btn");
-    todoDiv.appendChild(completedButton)
+  const newTodo = document.createElement("li");
+  newTodo.innerText = "hello"
+  newTodo.classList.add("todo-item");
+  todoDiv.appendChild(newTodo);
 
-    const trashButton =  document.createElement("button");
-    completedButton.innerHTML = '<i class="fas fa-trash"></i>'
-    completedButton.classList.add("completed-btn");
-    todoDiv.appendChild(trashButton)
+  const completedButton = document.createElement("button");
+  completedButton.innerHTML = '<i class="fas fa-check"></i>';
+  completedButton.classList.add("complete-btn");
+  todoDiv.appendChild(completedButton);
 
-    todoList.appendChild(todoDiv)
+  const trashButton = document.createElement("button");
+  trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+  trashButton.classList.add("trash-btn");
+  todoDiv.appendChild(trashButton);
+
+  todoList.appendChild(todoDiv);
 }
